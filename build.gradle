@@ -1,0 +1,52 @@
+buildscript {
+    repositories {
+        maven { url "https://repo.spring.io/libs-release" }
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.10.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+/*
+war {
+    baseName = 'myapp'
+    version =  '0.5.0'
+}
+*/
+
+jar {
+    baseName = 'bazy-rest'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://repo.spring.io/libs-release" }
+    maven { url "https://repository.jboss.org/nexus/content/repositories/releases" }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile 'com.pi4j:pi4j-core:0.0.5'
+
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("org.springframework:spring-test")
+    testCompile("junit:junit")
+}
+configurations {
+    providedRuntime
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
