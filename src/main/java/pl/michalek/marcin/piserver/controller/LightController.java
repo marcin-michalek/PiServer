@@ -32,4 +32,11 @@ public class LightController {
         relay.low();
         return new SuccessResponse("Lights off.");
     }
+
+    @RequestMapping("/toggle")
+    @ResponseBody
+    BaseResponse getLightsState() {
+        relay.toggle();
+        return new SuccessResponse("Lights status.");
+    }
 }
