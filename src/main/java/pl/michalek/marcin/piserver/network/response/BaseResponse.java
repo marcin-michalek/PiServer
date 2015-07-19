@@ -1,4 +1,4 @@
-package pl.michalek.marcin.piserver.response;
+package pl.michalek.marcin.piserver.network.response;
 
 import java.io.Serializable;
 

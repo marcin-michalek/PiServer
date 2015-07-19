@@ -3,8 +3,8 @@ package pl.michalek.marcin.piserver.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.michalek.marcin.piserver.components.MusicPlayer;
-import pl.michalek.marcin.piserver.response.BaseResponse;
-import pl.michalek.marcin.piserver.response.SuccessResponse;
+import pl.michalek.marcin.piserver.network.response.BaseResponse;
+import pl.michalek.marcin.piserver.network.response.SuccessResponse;
 
 import javax.sound.sampled.*;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.io.IOException;
  * Created by Marcin on 2015-02-06.
  */
 @RestController
-@RequestMapping(value = "/music")
+@RequestMapping("/music")
 public class MusicController {
 
     @RequestMapping("/play")

@@ -5,14 +5,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.michalek.marcin.piserver.audio.EspeakManager;
-import pl.michalek.marcin.piserver.response.BaseResponse;
-import pl.michalek.marcin.piserver.response.SuccessResponse;
+import pl.michalek.marcin.piserver.network.response.BaseResponse;
+import pl.michalek.marcin.piserver.network.response.SuccessResponse;
 
 /**
  * Created by Marcin on 2015-02-06.
  */
 @RestController
-@RequestMapping(value = "/light")
+@RequestMapping("/light")
 public class LightController {
     final private GpioController gpioController = GpioFactory.getInstance();
     private GpioPinDigitalOutput relay = gpioController.provisionDigitalOutputPin(
