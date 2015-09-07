@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import pl.michalek.marcin.piserver.network.dto.openweather.City;
 import pl.michalek.marcin.piserver.network.dto.openweather.DailyForecast;
 
+import java.util.List;
+
 /**
  *
  */
@@ -23,7 +25,7 @@ public class DailyForecastData {
     private City city;
 
     @JsonProperty("list")
-    private DailyForecast[] forecasts;
+    private List<DailyForecast> forecasts;
 
     public Integer getCod() {
         return cod;
@@ -57,11 +59,11 @@ public class DailyForecastData {
         this.city = city;
     }
 
-    public DailyForecast[] getForecasts() {
+    public List<DailyForecast> getForecasts() {
         return forecasts;
     }
 
-    public void setForecasts(final DailyForecast[] forecasts) {
+    public void setForecasts(final List<DailyForecast> forecasts) {
         this.forecasts = forecasts;
     }
 }

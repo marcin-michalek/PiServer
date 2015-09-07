@@ -19,4 +19,10 @@ public class WeatherUtil extends BaseRestTemplate {
                 DailyForecastData.class
         );
     }
+
+    public static Optional<DailyForecast> getFitrstRainyDay(List<DailyForecast> dailyForecasts){
+        return dailyForecasts.stream()
+                .filter(forecast -> forecast.getRain() != null)
+                .findFirst();
+    }
 }

@@ -9,7 +9,7 @@ import java.io.IOException;
 public class EspeakManager {
     public static void synthesize(String message) {
         try {
-            Runtime.getRuntime().exec("espeak \"" + message + "\"");
+            Runtime.getRuntime().exec(new String[] {"espeak", message});
         } catch (IOException e) {
             e.printStackTrace();
         }
