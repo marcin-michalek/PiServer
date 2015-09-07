@@ -7,7 +7,7 @@ import pl.michalek.marcin.piserver.network.dto.DailyForecastData;
 import static junit.framework.TestCase.assertNotNull;
 
 /**
- * SvnMirror
+ * PiServer
  * Created by Marcin on 2015-07-19.
  */
 public class WeatherUtilTest {

@@ -3,7 +3,7 @@ package pl.michalek.marcin.piserver.audio;
 import java.io.IOException;
 
 /**
- * SvnMirror
+ * PiServer
  * Created by Marcin on 2015-06-30.
  */
 public class EspeakManager {

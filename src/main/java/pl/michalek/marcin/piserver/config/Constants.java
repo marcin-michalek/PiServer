@@ -1,7 +1,7 @@
 package pl.michalek.marcin.piserver.config;
 
 /**
- * SvnMirror
+ * PiServer
  * Created by Marcin on 2015-07-18.
  */
 public final class Constants {
