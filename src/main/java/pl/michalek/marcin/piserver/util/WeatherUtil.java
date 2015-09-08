@@ -1,4 +1,4 @@
-package pl.michalek.marcin.piserver.network.weather;
+package pl.michalek.marcin.piserver.util;
 
 import pl.michalek.marcin.piserver.config.Constants;
 import pl.michalek.marcin.piserver.network.BaseRestTemplate;
