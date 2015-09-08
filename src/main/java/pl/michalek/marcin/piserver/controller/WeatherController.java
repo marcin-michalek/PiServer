@@ -38,4 +38,17 @@ public class WeatherController {
             EspeakManager.synthesize("No rain on this week.");
         }
     }
+
+    @RequestMapping("/rain/say/when")
+    @ResponseBody
+    Long getFirstRainyDay() {
+        Optional<DailyForecast> dailyForecast = WeatherUtil.getFitrstRainyDay(
+                WeatherUtil.getDailyForecastForCityById(Constants.CITY_ID_KRAKOW).getForecasts());
+
+        if (dailyForecast.isPresent()) {
+            return dailyForecast.get().getDate();
+        }
+
+        return null;
+    }
 }
