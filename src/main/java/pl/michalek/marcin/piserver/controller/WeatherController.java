@@ -39,7 +39,7 @@ public class WeatherController {
         }
     }
 
-    @RequestMapping("/rain/say/when")
+    @RequestMapping("/rain/get/when")
     @ResponseBody
     Long getFirstRainyDay() {
         Optional<DailyForecast> dailyForecast = WeatherUtil.getFitrstRainyDay(
